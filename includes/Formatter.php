@@ -9,7 +9,7 @@ class Formatter
 
     public function ctz_get_data_from_contact_form($data, $contact_form) {
 
-        $submission = WPCF7_Submission::get_instance();
+        $submission = WPCF7_Submission::get_instance(); // @phpstan-ignore-line
         $data = $submission->get_posted_data();
 
         if (!is_array($data)) {
